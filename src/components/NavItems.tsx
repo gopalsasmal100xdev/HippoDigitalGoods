@@ -21,6 +21,7 @@ export default function NavItems() {
       document.removeEventListener("keydown", handler);
     };
   }, []);
+  useOnClickOutside(navRef, () => setActiveIndex(null));
 
   return (
     <div className="flex gap-4 h-full" ref={navRef}>
@@ -35,7 +36,6 @@ export default function NavItems() {
 
         const isOpen = i === activeIndex;
         const close = () => setActiveIndex(null);
-        useOnClickOutside(navRef, () => setActiveIndex(null));
 
         return (
           <NavItem

@@ -3,6 +3,7 @@ import MaxWidthWrapper from "./MaxWidthWrapper";
 import { Icons } from "./Icons";
 import NavItems from "./NavItems";
 import { buttonVariants } from "./ui/button";
+import Cart from "./Cart";
 
 export default async function Navbar() {
   const user = false;
@@ -12,8 +13,7 @@ export default async function Navbar() {
         <MaxWidthWrapper>
           <div className="border-b border-gray-200">
             <div className="flex h-16 items-center">
-              {/* TODO : Mobile navbar  */}
-
+              {/* <MobileNavbar /> */}
               <div className="ml-4 flex lg:ml-0">
                 <Link href="/">
                   <Icons.logo className="h-10 w-10" />
@@ -44,7 +44,6 @@ export default async function Navbar() {
                   )}
 
                   {user ? (
-                    // <UserAccountNav user={user} />
                     <h1>Account navbar</h1>
                   ) : (
                     <Link
@@ -73,8 +72,7 @@ export default async function Navbar() {
                   )}
 
                   <div className='ml-4 flow-root lg:ml-6'>
-                    {/* <Cart /> */}
-                    cart
+                    <Cart />
                   </div>
                 </div>
               </div>
